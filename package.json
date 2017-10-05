@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ClementLmn/arduino/issues"
   },
-  "homepage": "https://github.com/ClementLmn/arduino#readme"
+  "homepage": "https://github.com/ClementLmn/arduino#readme",
+  "dependencies": {
+    "serialport": "^5.0.0"
+  }
 }
