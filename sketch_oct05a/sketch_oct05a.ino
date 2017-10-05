@@ -1,4 +1,5 @@
-int MA_LED = 13;
+int MA_LED = 2;
+int MON_POTARD = A0;
 
 void setup() {
   // put your setup code here, to run once:
@@ -8,7 +9,9 @@ void setup() {
 
 void loop() {
   char cmd;
-  // put your main code here, to run repeatedly:
+  int v = map(analogRead(MON_POTARD), 0, 1023, 0, 360);
+  Serial.println(v);
+  delay(50);
   if(Serial.available()){
     cmd = Serial.read();
     if(cmd == '1'){

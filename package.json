@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cross-env NODE_ENV=production && webpack-dev-server",
+    "server": "node src/server/index.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,16 @@
   },
   "homepage": "https://github.com/ClementLmn/arduino#readme",
   "dependencies": {
-    "serialport": "^5.0.0"
+    "express": "^4.16.1",
+    "serialport": "^5.0.0",
+    "socket.io": "^2.0.3",
+    "socket.io-client": "^2.0.3"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
   }
 }
